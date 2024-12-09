@@ -1,0 +1,10 @@
+#search {
+    width: 100%;
+}
+
+footer small {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
