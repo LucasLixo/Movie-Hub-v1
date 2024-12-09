@@ -1,5 +1,5 @@
 <h1>Olá Mundo</h1>
-<form action="" method="get">
+<form action="<?= $search ?>" method="get">
     <label for="search">Search:</label>
     <input type="text" name="search" id="search" autocomplete="false" autocapitalize="true">
     <label for="type">Type:</label>

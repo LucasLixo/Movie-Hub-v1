@@ -1,8 +1,8 @@
-    <?php if (isset($js) && !empty($js)) : ?>
-        <?php foreach ($js as $j) : ?>
-            <script type="application/javascript" src="./assets/scripts/<?= $j ?>"></script>
-        <?php endforeach; ?>
-    <?php endif; ?>
+	<script type="application/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="application/javascript" src="assets/js/browser.min.js"></script>
+	<script type="application/javascript" src="assets/js/breakpoints.min.js"></script>
+	<script type="application/javascript" src="assets/js/util.js"></script>
+	<script type="application/javascript" src="assets/js/main.js"></script>
     <script type="application/javascript" defer>
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('html').style.display = 'block';
