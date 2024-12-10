@@ -59,16 +59,30 @@ class Home extends BaseController
         return $this->minifier($html);
     }
 
-
-    private function apiSearchMovie(string $search, int $page = 1)
+    private function apiSearchText(string $type, string $search, int $page = 1)
     {
         $client = \Config\Services::curlrequest();
 
         $params = [
-            'type' => 'movie',
+            'type' => $type,
             'r' => 'json',
             'page' => $page,
             's' => $search,
+        ];
+
+        $response = $client->get($_ENV['APP_API'] . '&' . http_build_query($params));
+
+        return json_decode($response->getBody(), true);
+    }
+    
+    private function apiSearchImdb(string $type, string $imdb)
+    {
+        $client = \Config\Services::curlrequest();
+
+        $params = [
+            'type' => $type,
+            'r' => 'json',
+            'i' => $imdb,
         ];
 
         $response = $client->get($_ENV['APP_API'] . '&' . http_build_query($params));
@@ -137,14 +151,9 @@ class Home extends BaseController
             return $this->renderPage(null);
         }
 
-        // echo '<pre>';
-        // var_dump($this->apiSearchMovie($search));
-        // echo '</pre>';
-        // die(1);
-
         $pageData = [
             'search' => $search,
-            'results' => $this->apiSearchMovie($search, $page),
+            'results' => $this->apiSearchText('movie', $search, $page),
             'page' => $page,
             'search' => $search,
         ];
@@ -200,6 +209,11 @@ class Home extends BaseController
         if ($imdb  == -1) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
+
+        echo '<pre>';
+        var_dump($this->apiSearchImdb('movie', $imdb));
+        echo '</pre>';
+        die(1);
 
         return $imdb;
     }
