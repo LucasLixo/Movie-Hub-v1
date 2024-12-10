@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="" src="fastlane/App.png"  width=160 height=160  align="center">
+<img width="" src="public/favicon.ico"  width=160 height=160  align="center">
 
 # Movie Hub
 
