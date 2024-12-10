@@ -237,3 +237,262 @@ in APPPATH\Views\search\movie.php on line 11.
 11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 19:55:00 --> ErrorException: Undefined variable $form
+[Method: GET, Route: movie/search/3/batman]
+in APPPATH\Views\home\home.php on line 1.
+ 1 APPPATH\Views\home\home.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $form', 'C:\\laragon\\www\\app\\Views\\home\\home.php', 1)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\home\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/home.php', [], true)
+ 5 APPPATH\Controllers\Home.php(60): view('home/home.php', [...])
+ 6 APPPATH\Controllers\Home.php(179): App\Controllers\Home->renderPage([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie(3, 'batman')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 19:55:02 --> ErrorException: Undefined variable $form
+[Method: GET, Route: movie/search/3/batman]
+in APPPATH\Views\home\home.php on line 1.
+ 1 APPPATH\Views\home\home.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $form', 'C:\\laragon\\www\\app\\Views\\home\\home.php', 1)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\home\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/home.php', [], true)
+ 5 APPPATH\Controllers\Home.php(60): view('home/home.php', [...])
+ 6 APPPATH\Controllers\Home.php(179): App\Controllers\Home->renderPage([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie(3, 'batman')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 20:34:30 --> ErrorException: Undefined variable $search
+[Method: GET, Route: movie/details/390e4c8b916135bf8113ddee504c66eb.html]
+in APPPATH\Views\search\movie.php on line 4.
+ 1 APPPATH\Views\search\movie.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $search', 'C:\\laragon\\www\\app\\Views\\search\\movie.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\search\\movie.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('search/movie.php', [], true)
+ 5 APPPATH\Controllers\Home.php(83): view('search/movie.php', [...])
+ 6 APPPATH\Controllers\Home.php(239): App\Controllers\Home->renderPage([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsMovie('390e4c8b916135bf8113ddee504c66eb')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 22:58:01 --> TypeError: aesDecrypt(): Return value must be of type int, string returned
+[Method: GET, Route: movie/details/1b1fe6e7b1387b319eb6f436fe89d9af.html]
+in APPPATH\Helpers\Help_helper.php on line 20.
+ 1 APPPATH\Controllers\Home.php(226): aesDecrypt('1b1fe6e7b1387b319eb6f436fe89d9af')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsMovie('1b1fe6e7b1387b319eb6f436fe89d9af')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:31:30 --> ErrorException: Array to string conversion
+[Method: GET, Route: serie/search/1/batman]
+in APPPATH\Views\search\serie.php on line 12.
+ 1 APPPATH\Views\search\serie.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\app\\Views\\search\\serie.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\search\\serie.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('search/serie.php', [], true)
+ 5 APPPATH\Controllers\Home.php(83): view('search/serie.php', [...])
+ 6 APPPATH\Controllers\Home.php(209): App\Controllers\Home->renderPage([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchSerie(1, 'batman')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:33:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: serie/details/f9f7b2c5b777a66c5e9ddd33ef1ce566.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(255): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('f9f7b2c5b777a66c5e9ddd33ef1ce566')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:33:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: serie/details/f9f7b2c5b777a66c5e9ddd33ef1ce566.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(255): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('f9f7b2c5b777a66c5e9ddd33ef1ce566')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:33:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: serie/details/f9f7b2c5b777a66c5e9ddd33ef1ce566.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(255): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('f9f7b2c5b777a66c5e9ddd33ef1ce566')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:36:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: serie/details/f9f7b2c5b777a66c5e9ddd33ef1ce566.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(259): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('f9f7b2c5b777a66c5e9ddd33ef1ce566')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:36:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: serie/details/f9f7b2c5b777a66c5e9ddd33ef1ce566.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(259): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('f9f7b2c5b777a66c5e9ddd33ef1ce566')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:36:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: serie/details/fec6c34440c801c3124ffd10dd786481.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(259): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('fec6c34440c801c3124ffd10dd786481')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:37:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: serie/details/fec6c34440c801c3124ffd10dd786481.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(258): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('fec6c34440c801c3124ffd10dd786481')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:37:28 --> ErrorException: Undefined array key "DVD"
+[Method: GET, Route: serie/details/fec6c34440c801c3124ffd10dd786481.html]
+in APPPATH\Views\details\serie.php on line 39.
+ 1 APPPATH\Views\details\serie.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "DVD"', 'C:\\laragon\\www\\app\\Views\\details\\serie.php', 39)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\details\\serie.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('details/serie.php', [], true)
+ 5 APPPATH\Controllers\Home.php(83): view('details/serie.php', [...])
+ 6 APPPATH\Controllers\Home.php(258): App\Controllers\Home->renderPage([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('fec6c34440c801c3124ffd10dd786481')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:39:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: serie/details/77cd57a4cc95e8449915761bb1f4a47d.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(259): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->detailsSerie('77cd57a4cc95e8449915761bb1f4a47d')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:40:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: index.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(139): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:40:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: index.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(139): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:40:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: index.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(139): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 23:40:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "section/search.php"
+[Method: GET, Route: index.html]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('section/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(83): view('section/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(139): App\Controllers\Home->renderPage([...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')

@@ -1,7 +1,7 @@
 <div id="main">
     <div class="inner">
         <header>
-            <h1><?= esc($search) ?></h1>
+            <h1><?= esc(isset($search) ? $search : $title) ?></h1>
         </header>
         <style>
             #main .inner header h1 {
@@ -35,7 +35,7 @@
                         <span><?= esc($page - 1) ?></span>
                     </a>
                 <?php endif; ?>
-                <a href="<?= esc(base_url() . 'movie/search/' . $page . '/' . $search) ?>" target="_self">
+                <a href="<?= esc(base_url() . 'movie/search/' . $page . '/' . $search . '#') ?>" target="_self">
                     <span><?= esc($page . ' - ' . intval($results['totalResults'] / 10)) ?></span>
                 </a>
                 <?php if ($page >= intval($results['totalResults'] / 10)): ?>
@@ -66,15 +66,27 @@
                 }
 
                 .pages a span {
+                    -moz-font-size: 2rem;
+                    -webkit-font-size: 2rem;
+                    -ms-font-size: 2rem;
                     font-size: 2rem;
+                    -moz-font-weight: bold;
+                    -webkit-font-weight: bold;
+                    -ms-font-weight: bold;
                     font-weight: bold;
                 }
 
                 .pages a svg {
+                    -moz-fill: #585858;
+                    -webkit-fill: #585858;
+                    -ms-fill: #585858;
                     fill: #585858;
                 }
 
                 .pages a:hover svg {
+                    -moz-fill: #f2849e !important;
+                    -webkit-fill: #f2849e !important;
+                    -ms-fill: #f2849e !important;
                     fill: #f2849e !important;
                 }
             </style>

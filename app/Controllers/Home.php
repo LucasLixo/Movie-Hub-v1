@@ -7,6 +7,29 @@ class Home extends BaseController
     protected $request;
     protected $helpers = ['form', 'html', 'help'];
 
+    private $sectionSearch = [
+        'form' => [
+            'method' => 'GET',
+        ],
+        'input' => [
+            'type' => 'text',
+            'value' => null,
+            'name' => 'search',
+            'id' => 'search',
+            'maxlength' => '32',
+            'autocomplete' => 'false',
+            'autocapitalize' => 'true',
+        ],
+        'dropdown' => [
+            'movie' => 'Movie',
+            'serie' => 'Serie',
+        ],
+        'select' => [
+            'name' => 'type',
+            'id' => 'type',
+        ],
+    ];
+
     /**
      * Minify HTML content.
      *
@@ -39,7 +62,7 @@ class Home extends BaseController
      * @param array $pageData
      * @return string
      */
-    private function renderPage(string|null $contentView, array $pageData = []): string
+    private function renderPage(string|array|null $contentViews = [], array $pageData = []): string
     {
         $header = [
             'title' => $_ENV['APP_TITLE'],
@@ -51,13 +74,24 @@ class Home extends BaseController
         ];
 
         $html = view('layout/header.php', $header) .
-            view('layout/header.html.php', $header) .
-            (($contentView != null) ? view($contentView, $pageData) : '<div style="display: block; height: 16rem;"></div>') .
-            view('layout/footer.html.php', $footer) .
+            view('layout/header.html.php', $header);
+
+        if (is_string($contentViews)) {
+            $contentViews = [$contentViews];
+        }
+        foreach ($contentViews as $contentView) {
+            $html .=  view($contentView, $pageData);
+        }
+        if ($contentViews == null) {
+            $html .= '<div style="display: block; height: 16rem;"></div>';
+        }
+
+        $html .= view('layout/footer.html.php', $footer) .
             view('layout/footer.php');
 
         return $this->minifier($html);
     }
+
 
     private function apiSearchText(string $type, string $search, int $page = 1)
     {
@@ -74,7 +108,7 @@ class Home extends BaseController
 
         return json_decode($response->getBody(), true);
     }
-    
+
     private function apiSearchImdb(string $type, string $imdb)
     {
         $client = \Config\Services::curlrequest();
@@ -102,31 +136,7 @@ class Home extends BaseController
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
-        $pageData = [
-            'form' => [
-                'method' => 'GET',
-            ],
-            'input' => [
-                'type' => 'text',
-                'value' => null,
-                'name' => 'search',
-                'id' => 'search',
-                'maxlength' => '32',
-                'autocomplete' => 'false',
-                'autocapitalize' => 'true',
-            ],
-            'dropdown' => [
-                'movie' => 'Movie',
-                'serie' => 'Serie',
-            ],
-            'selected' => 'movie',
-            'select' => [
-                'name' => 'type',
-                'id' => 'type',
-            ],
-        ];
-
-        return $this->renderPage('home/home.php', $pageData);
+        return $this->renderPage('section/search.php', $this->sectionSearch);
     }
 
     /**
@@ -147,7 +157,7 @@ class Home extends BaseController
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
-        if($page < 1) {
+        if ($page < 1) {
             return $this->renderPage(null);
         }
 
@@ -156,13 +166,17 @@ class Home extends BaseController
             'results' => $this->apiSearchText('movie', $search, $page),
             'page' => $page,
             'search' => $search,
+            'selected' => 'movie',
         ];
 
-        if($pageData['results']['Response'] != 'True') {
+        if ($pageData['results']['Response'] != 'True') {
             return $this->renderPage(null);
         }
-        
-        return $this->renderPage('search/movie.php', $pageData);
+
+        return $this->renderPage([
+            'section/search.php',
+            'search/movie.php',
+        ], array_merge($pageData, $this->sectionSearch));
     }
 
     /**
@@ -185,7 +199,12 @@ class Home extends BaseController
 
         $pageData = [
             'search' => $search,
+            'results' => $this->apiSearchText('series', $search, $page),
+            'page' => $page,
+            'search' => $search,
+            'selected' => 'serie',
         ];
+
 
         return $this->renderPage('search/serie.php', $pageData);
     }
@@ -206,14 +225,18 @@ class Home extends BaseController
     {
         $imdb = aesDecrypt($id);
 
-        if ($imdb  == -1) {
+        if ($imdb == -1) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
-        echo '<pre>';
-        var_dump($this->apiSearchImdb('movie', $imdb));
-        echo '</pre>';
-        die(1);
+        $pageData = [
+            'results' => $this->apiSearchImdb('movie', $imdb),
+        ];
+
+        return $this->renderPage([
+            'section/search.php',
+            'details/movie.php',
+        ], array_merge($pageData, $this->sectionSearch));
 
         return $imdb;
     }
@@ -225,6 +248,15 @@ class Home extends BaseController
         if ($imdb == -1) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
+
+        $pageData = [
+            'results' => $this->apiSearchImdb('series', $imdb),
+        ];
+
+        return $this->renderPage([
+            'section/search.php',
+            'details/serie.php',
+        ], array_merge($pageData, $this->sectionSearch));
 
         return $imdb;
     }

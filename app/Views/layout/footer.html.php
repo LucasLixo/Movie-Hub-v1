@@ -1,3 +1,5 @@
+</div>
+</div>
 <header id="footer">
     <div class="inner">
         <!-- <section>
