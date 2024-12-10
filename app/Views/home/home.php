@@ -1,16 +1,40 @@
-<h1>Olá Mundo</h1>
-<form action="<?= $search ?>" method="get">
-    <label for="search">Search:</label>
-    <input type="text" name="search" id="search" autocomplete="false" autocapitalize="true">
-    <label for="type">Type:</label>
-    <select name="type" id="type">
-        <option value="movie">Movie</option>
-        <option value="series">Serie</option>
-    </select>
-    <label for="submit">Search</label>
-    <button type="submit" id="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 -960 960 960" width="2rem">
-            <path fill="white" d="M795.761-114.304 531.326-378.5q-29.761 25.264-69.6 39.415-39.84 14.15-85.161 14.15-109.835 0-185.95-76.195Q114.5-477.326 114.5-585t76.196-183.87q76.195-76.195 184.369-76.195t183.87 76.195q75.695 76.196 75.695 184.02 0 43.328-13.641 82.97-13.641 39.641-40.924 74.402L845.5-164.043l-49.739 49.739ZM375.65-393.065q79.73 0 135.29-56.245Q566.5-505.554 566.5-585t-55.595-135.69q-55.595-56.245-135.255-56.245-80.494 0-136.757 56.245Q182.63-664.446 182.63-585t56.228 135.69q56.227 56.245 136.792 56.245Z" />
-        </svg>
-    </button>
-</form>
+<div id="main">
+    <div class="inner">
+        <?= form_open(base_url() . '#', $form); ?>
+            <label for="search">
+                <span id="text-placeholder"></span>
+                <span id="text-cursor">|</span>
+            </label>
+            <?= form_input($input); ?>
+            <?= form_label('Type', 'type'); ?>
+            <?= form_dropdown('', $dropdown, $selected, $select); ?>
+            <?= form_label('Search', 'submit'); ?>
+            <ul class="actions">
+                <li><?= form_submit('search', 'Search', ['class' => 'primary']); ?></li>
+            </ul>
+        <?= form_close(); ?>
+        <script defer>
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const type = document.querySelector('#type').value;
+                const search = encodeURIComponent(document.querySelector('#search').value.trim());
+
+                const validTypes = <?= json_encode(array_keys($dropdown)) ?>;
+
+                if (!validTypes.includes(type)) {
+                    alert('Invalid type selected.');
+                    return;
+                }
+
+                if (!search) {
+                    alert('Please enter a search term.');
+                    return;
+                }
+
+                const redirectUrl = `<?= esc(base_url()) ?>${type}/search/1/${search}`;
+                window.location.href = redirectUrl;
+            });
+        </script>
+    </div>
+</div>

@@ -1,0 +1,239 @@
+CRITICAL - 2024-12-10 13:06:40 --> ErrorException: Access level to App\Controllers\Home::$helpers must be protected (as in class App\Controllers\BaseController) or weaker
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-10 13:06:42 --> ErrorException: Access level to App\Controllers\Home::$helpers must be protected (as in class App\Controllers\BaseController) or weaker
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-10 13:55:38 --> ErrorException: Undefined variable $type
+[Method: GET, Route: movie/search/ff]
+in APPPATH\Views\search\search.php on line 2.
+ 1 APPPATH\Views\search\search.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $type', 'C:\\laragon\\www\\app\\Views\\search\\search.php', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\search\\search.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('search/search.php', [], true)
+ 5 APPPATH\Controllers\Home.php(54): view('search/search.php', [...])
+ 6 APPPATH\Controllers\Home.php(88): App\Controllers\Home->renderPage('search/search.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('ff')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 14:00:30 --> ErrorException: Undefined variable $type
+[Method: GET, Route: movie/search/ff]
+in APPPATH\Views\search\search.php on line 2.
+ 1 APPPATH\Views\search\search.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $type', 'C:\\laragon\\www\\app\\Views\\search\\search.php', 2)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\search\\search.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('search/search.php', [], true)
+ 5 APPPATH\Controllers\Home.php(54): view('search/search.php', [...])
+ 6 APPPATH\Controllers\Home.php(91): App\Controllers\Home->renderPage('search/search.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('ff')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 14:01:55 --> ErrorException: Undefined array key 0
+[Method: GET, Route: /]
+in APPPATH\Views\home\home.php on line 29.
+ 1 APPPATH\Views\home\home.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\laragon\\www\\app\\Views\\home\\home.php', 29)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\home\\home.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/home.php', [], true)
+ 5 APPPATH\Controllers\Home.php(54): view('home/home.php', [...])
+ 6 APPPATH\Controllers\Home.php(75): App\Controllers\Home->renderPage('home/home.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 14:09:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "search/search.php"
+[Method: GET, Route: movie/search/ff]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('search/search.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('search/search.php', [], true)
+ 3 APPPATH\Controllers\Home.php(54): view('search/search.php', [...])
+ 4 APPPATH\Controllers\Home.php(91): App\Controllers\Home->renderPage('search/search.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('ff')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 14:37:50 --> TypeError: strlen(): Argument #1 ($str) must be of type string, null given
+[Method: GET, Route: index.html]
+in SYSTEMPATH\Helpers\form_helper.php on line 791.
+ 1 SYSTEMPATH\Helpers\form_helper.php(309): parse_form_attributes(null, [...])
+ 2 APPPATH\Views\home\home.php(9): form_dropdown(null, [...], [...], ' name="type" id="type"')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\home\\home.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home/home.php', [], true)
+ 6 APPPATH\Controllers\Home.php(54): view('home/home.php', [...])
+ 7 APPPATH\Controllers\Home.php(92): App\Controllers\Home->renderPage('home/home.php', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:03:15 --> Error: Call to a member function is() on null
+[Method: GET, Route: serie/search/ff]
+in APPPATH\Controllers\Home.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:04:01 --> Error: Call to a member function is() on null
+[Method: GET, Route: serie/search/ff]
+in APPPATH\Controllers\Home.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:04:02 --> Error: Call to a member function is() on null
+[Method: GET, Route: serie/search/ff]
+in APPPATH\Controllers\Home.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:49:12 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: GET, Route: movie/search/ff]
+in APPPATH\Controllers\Home.php on line 141.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('ff')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:51:54 --> CodeIgniter\HTTP\Exceptions\HTTPException: 22 : The requested URL returned error: 400
+[Method: GET, Route: movie/search/ff]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 694.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(694): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://www.omdbapi.com/apikey=61ec91e&type=movie&r=json&page=0&s=ff')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://www.omdbapi.com/apikey=61ec91e&type=movie&r=json&page=0&s=ff', [])
+ 5 APPPATH\Controllers\Home.php(75): CodeIgniter\HTTP\CURLRequest->get('http://www.omdbapi.com/apikey=61ec91e&type=movie&r=json&page=0&s=ff')
+ 6 APPPATH\Controllers\Home.php(141): App\Controllers\Home->apiSearchMovie('ff')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('ff')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:54:50 --> CodeIgniter\HTTP\Exceptions\HTTPException: 22 : The requested URL returned error: 401
+[Method: GET, Route: movie/search/batman]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 694.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(694): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 401')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman', [])
+ 5 APPPATH\Controllers\Home.php(74): CodeIgniter\HTTP\CURLRequest->get('http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman')
+ 6 APPPATH\Controllers\Home.php(142): App\Controllers\Home->apiSearchMovie('batman')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('batman')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:55:06 --> CodeIgniter\HTTP\Exceptions\HTTPException: 22 : The requested URL returned error: 401
+[Method: GET, Route: movie/search/batman]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 694.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(694): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 401')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman', [])
+ 5 APPPATH\Controllers\Home.php(74): CodeIgniter\HTTP\CURLRequest->get('http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman')
+ 6 APPPATH\Controllers\Home.php(143): App\Controllers\Home->apiSearchMovie('batman')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('batman')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:55:07 --> CodeIgniter\HTTP\Exceptions\HTTPException: 22 : The requested URL returned error: 401
+[Method: GET, Route: movie/search/batman]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 694.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(694): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 401')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman', [])
+ 5 APPPATH\Controllers\Home.php(74): CodeIgniter\HTTP\CURLRequest->get('http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=0&s=batman')
+ 6 APPPATH\Controllers\Home.php(143): App\Controllers\Home->apiSearchMovie('batman')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('batman')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 15:57:26 --> CodeIgniter\HTTP\Exceptions\HTTPException: 22 : The requested URL returned error: 401
+[Method: GET, Route: movie/search/batman]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 694.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(694): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 401')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=1&s=batman')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=1&s=batman', [])
+ 5 APPPATH\Controllers\Home.php(74): CodeIgniter\HTTP\CURLRequest->get('http://www.omdbapi.com/?apikey=61ec91etype=movie&r=json&page=1&s=batman')
+ 6 APPPATH\Controllers\Home.php(141): App\Controllers\Home->apiSearchMovie('batman')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('batman')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 16:18:44 --> ErrorException: Undefined array key "Search"
+[Method: GET, Route: movie/search/fo]
+in APPPATH\Views\search\movie.php on line 12.
+ 1 APPPATH\Views\search\movie.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Search"', 'C:\\laragon\\www\\app\\Views\\search\\movie.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\search\\movie.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('search/movie.php', [], true)
+ 5 APPPATH\Controllers\Home.php(55): view('search/movie.php', [...])
+ 6 APPPATH\Controllers\Home.php(146): App\Controllers\Home->renderPage('search/movie.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('fo')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
+CRITICAL - 2024-12-10 16:19:54 --> ErrorException: Undefined array key "Search"
+[Method: GET, Route: movie/search/fo]
+in APPPATH\Views\search\movie.php on line 11.
+ 1 APPPATH\Views\search\movie.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Search"', 'C:\\laragon\\www\\app\\Views\\search\\movie.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\app\\Views\\search\\movie.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('search/movie.php', [], true)
+ 5 APPPATH\Controllers\Home.php(55): view('search/movie.php', [...])
+ 6 APPPATH\Controllers\Home.php(146): App\Controllers\Home->renderPage('search/movie.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->searchMovie('fo')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\public\\index.php')
