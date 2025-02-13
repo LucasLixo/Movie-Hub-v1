@@ -92,7 +92,6 @@ class Home extends BaseController
         return $this->minifier($html);
     }
 
-
     private function apiSearchText(string $type, string $search, int $page = 1)
     {
         $client = \Config\Services::curlrequest();

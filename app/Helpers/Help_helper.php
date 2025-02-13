@@ -20,6 +20,7 @@ function aesDecrypt($string)
     return openssl_decrypt(hex2bin($string), 'aes-256-cbc', $_ENV['AES_KEY'], OPENSSL_RAW_DATA, $_ENV['AES_IY']);
 }
 
+// ============================================================
 function printDebug(mixed $value, bool $die = true): void
 {
     echo '<pre>';
